@@ -1,0 +1,181 @@
+.header {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  margin-top: 1vh;
+  height: 80px;
+  /* padding-top: 10px; */
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: rgb(49, 66, 89);
+  /* position: relative; */
+  align-items: center;
+  /* border: 2px solid black; */
+}
+.header > .img {
+  height: 60px;
+  width: 20vw;
+  margin-right: 1vw;
+  /* border: 2px solid black; */
+}
+.header > .img > img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.header > .inputField {
+  width: 40vw;
+  height: 60px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+.header > .inputField > input {
+  grid-column: 1/4;
+  border-radius: 3px;
+  border: 2px solid rgb(49, 66, 89);
+  /* border: 2px solid black; */
+  margin-left: 5px;
+  height: 60%;
+  /* transform: scale(); */
+}
+.header > .inputField > button {
+  grid-column: 4/5;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: none;
+  background-color: rgb(49, 66, 89);
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16 px;
+  height: 70%;
+  transition: 1s;
+  cursor: pointer;
+  /* border: 2px solid black; */
+}
+.header > .componentsField {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 28vw;
+
+  /* border: 2px solid black; */
+}
+.header > .componentsField > .home {
+  grid-column: 1/2;
+  margin-left: 5px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+.header > .componentsField > .ourservices {
+  grid-column: 2/3;
+  text-align: center;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* padding-top: 35px; */
+
+  /* border: 2px solid black; */
+}
+.header > .componentsField > .contactus {
+  grid-column: 3/4;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+@media screen and (max-width: 1350px) {
+  .header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    height: max-content;
+    margin-bottom: 40px;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+  }
+  .header > .img {
+    width: 50%;
+    height: 100px;
+
+    /* border: 2px solid black; */
+  }
+  .header > .inputField {
+    width: 80%;
+    height: 100px;
+    font-size: 25px;
+  }
+  .header > .inputField > button {
+    font-size: 25px;
+  }
+  .header > .componentsField {
+    width: 80%;
+    height: 100px;
+    font-size: 25px;
+
+    /* border: 2px solid black; */
+  }
+}
+@media screen and (max-width: 680px) {
+  .header > .inputField > button {
+    font-size: 15px;
+  }
+  .header > .inputField {
+    width: 80%;
+    height: 60px;
+    font-size: 25px;
+  }
+  .header > .componentsField {
+    width: 80%;
+    height: 60px;
+    font-size: 15px;
+
+    /* border: 2px solid black; */
+  }
+  .header > .img {
+    /* width: 100px; */
+    height: 80px;
+  }
+  .header > .img > img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 424px) {
+  .header > .img {
+    /* width: 100px; */
+    height: 50px;
+  }
+  .header > .img > img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .header > .inputField > button {
+    font-size: 10px;
+  }
+  .header > .inputField {
+    width: 80%;
+    height: 60px;
+    font-size: 10px;
+  }
+  .header > .componentsField {
+    width: 80%;
+    height: 60px;
+    font-size: 10px;
+
+    /* border: 2px solid black; */
+  }
+}

@@ -1,0 +1,61 @@
+.parent-admin {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 10vh;
+}
+
+.admin {
+  width: 23rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* border: 2px solid black; */
+  gap: 10px;
+  background-color: rgba(240, 248, 255, 0.758);
+  box-shadow: 1px 1px 10px rgb(0 0 0/20%);
+  padding: 15px;
+  cursor: pointer;
+}
+.admin > .admin_name {
+  grid-column: 1/2;
+  display: flex;
+  gap: 50px;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  /* border: 2px solid red; */
+}
+.admin > .admin_mob {
+  grid-column: 1/2;
+  display: flex;
+  gap: 19px;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+}
+.admin > .admin_email {
+  grid-column: 1/2;
+  display: flex;
+  gap: 55px;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+}
+.admin > .admin_ser {
+  grid-column: 1/2;
+  display: flex;
+  gap: 42px;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+}
+.admin > .admin_date {
+  grid-column: 1/2;
+  display: flex;
+  gap: 60px;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+}
+.admin > .admin_time {
+  grid-column: 1/2;
+  display: flex;
+  gap: 57px;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+}

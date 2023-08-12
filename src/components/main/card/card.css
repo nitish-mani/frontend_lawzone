@@ -1,0 +1,61 @@
+.cardC {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  box-sizing: border-box;
+  /* border: 2px solid black; */
+}
+.cardC > div {
+  width: 23.75rem;
+  /* height: 60vh; */
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgb(0 0 0/20%);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.cardC > div:hover {
+  transform: scale(0.95);
+  box-shadow: 1px 1px 20px -5px rgb(0 0 0/20%);
+}
+
+.cardC > div > h3 {
+  color: rgb(49, 66, 89);
+}
+.cardC > div > img {
+  max-width: 95%;
+  max-height: 50%;
+}
+
+.cardC > div > p {
+  color: rgb(49, 66, 89);
+  line-height: 32px;
+  margin: 20px 0px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .cardC {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .cardC {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cardC > div {
+    width: 15.7rem;
+  }
+}

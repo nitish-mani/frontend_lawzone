@@ -1,0 +1,71 @@
+.rootR {
+  width: 100%;
+}
+
+.rootR > .outlet {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.rootR > .rootRFirstChild {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  position: sticky;
+  top: 0;
+  color: white;
+  background-color: #ff4a17;
+  height: 6vh;
+  justify-content: space-between;
+  z-index: 1;
+}
+.rootR > .rootRFirstChild > .rootR_1st {
+  display: flex;
+  width: 50%;
+  margin-left: 7vw;
+  align-items: center;
+}
+.rootR > .rootRFirstChild > .rootR_1st > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3vh;
+  font-size: 12px;
+}
+.rootR > .rootRFirstChild > .rootR_2nd {
+  display: flex;
+  width: 50%;
+  gap: 2vw;
+  flex-direction: row-reverse;
+  padding-right: 9vw;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+.rootR > .rootRFirstChild > .rootR_2nd > a {
+  color: white;
+  text-decoration: none;
+}
+.rootR > .rootRFirstChild > .rootR_2nd > a:hover {
+  transform: scale(1.2);
+}
+.rootR > .whatsapp {
+  position: relative;
+  height: 75px;
+  z-index: 1;
+  /* border: 2px solid black; */
+}
+.rootR > .whatsapp > .whatsapp_1st {
+  position: absolute;
+  right: 25px;
+  border-radius: 20%;
+  transition: .3s;
+}
+.rootR > .whatsapp > .whatsapp_1st:hover{
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1335px) {
+  .rootR > .rootRFirstChild {
+    display: none;
+  }
+}

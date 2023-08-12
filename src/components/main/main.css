@@ -1,0 +1,112 @@
+.section1 {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* height: fit-content; */
+  gap: 1vw;
+
+  padding-top: 1vh;
+  margin-bottom: 10vh;
+  /* border: 2px solid black; */
+  /* position: relative; */
+}
+
+.section1 > .div1 {
+  grid-column: 1/2;
+  width: 90%;
+  margin-top: 4vh;
+}
+@keyframes example {
+  0% {
+    background-image: url("https://img.freepik.com/free-photo/trademark-laptop-screen_53876-94895.jpg?size=626&ext=jpg");
+  }
+  25% {
+    background-image: url("https://img.freepik.com/free-photo/copyright-design-license-patent-trademark-value-concept_53876-123644.jpg?size=626&ext=jpg");
+  }
+  50% {
+    background-image: url("https://img.freepik.com/free-vector/isometric-iso-certification-concept_23-2148688048.jpg?size=626&ext=jpg&ga=GA1.1.591937131.1690564432&semt=sph");
+  }
+  75% {
+    background-image: url("https://img.freepik.com/premium-photo/man-adding-block-showing-words-intellectual-property-top-other-wooden-block-with-text-copyright-patents-inventionand-trademark_441362-1808.jpg?size=626&ext=jpg");
+  }
+  100% {
+    background-image: url("https://img.freepik.com/free-photo/patented-brand-identity-license-product-copyright-concept_53876-122707.jpg?size=626&ext=jpg&ga=GA1.1.591937131.1690564432&semt=sph");
+  }
+}
+.section1 > .div2 {
+  grid-column: 2/3;
+  margin-top: 4vh;
+
+  width: 90%;
+  /* left: 100%; */
+  margin-left: 3vw;
+  animation-name: example;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
+  animation-delay: 10ms;
+}
+.section1 > .div2 > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.section2 {
+  display: flex;
+  margin-top: 20vh;
+  /* background-color: aliceblue; */
+  justify-content: space-between;
+}
+.section2 > .sec2_div1 {
+  width: 90%;
+  /* height: 40vh; */
+}
+.section2 > .sec2_div1 > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.section2 > .sec2_div2 {
+  width: 90%;
+  padding-left: 5vw;
+}
+@media screen and (max-width: 1025px) {
+  .section1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .section1 > .div1 > h1 > span {
+    display: block;
+  }
+  .section1 > .div2 {
+    width: 70%;
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .section2 > .sec2_div1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section2 > .sec2_div2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section1 > .div1 > h1 > span {
+    display: block;
+  }
+  .section1 {
+    margin-top: 5rem;
+  }
+  .section1 > .div2 {
+    width: 100%;
+    height: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

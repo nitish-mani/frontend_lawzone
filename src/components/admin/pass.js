@@ -9,6 +9,7 @@ export default function Pass({ setPassword }) {
       alert("Please enter right password");
     }
   }
+  console.log(adminP);
 
   return (
     <div

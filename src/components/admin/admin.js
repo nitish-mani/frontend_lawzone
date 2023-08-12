@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./admin.css";
 import axios from "axios";
-import Admin_Card from "./admin_card";
+import AdminCard from "./admincard";
 
 export default function Admin() {
   const [getData, setGetData] = useState([]);
@@ -17,7 +17,7 @@ export default function Admin() {
   };
 
   const userUpdate = async (id) => {
-    const res = await axios.patch(
+    await axios.patch(
       `https://q9i3qxmuzi.execute-api.ap-south-1.amazonaws.com/second/updateData/${id}`,
       {
         read: true,
@@ -36,6 +36,7 @@ export default function Admin() {
       if (user.read === true) {
         x++;
       }
+      return;
     });
     setCount(x);
   };
@@ -113,7 +114,7 @@ export default function Admin() {
                 userUpdate(user._id);
               }}
             >
-              <Admin_Card user={user} />
+              <AdminCard user={user} />
             </div>
           );
         })}

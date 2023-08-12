@@ -207,7 +207,10 @@ export default function PF_ESIC({
           contribution is whose salary is less than Rs. 176/- per day.
         </p>
       </div>
-      <div style={{ textAlign: "center", marginTop: "10vh" }}>
+      <div
+        className="lastDiv"
+        style={{ textAlign: "center", marginTop: "10vh" }}
+      >
         <img
           src={require("./30092022_ESIC-Registration1-1024x654.jpg")}
           alt="photo"

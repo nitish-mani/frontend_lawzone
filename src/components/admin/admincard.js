@@ -1,4 +1,4 @@
-export default function Admin_Card({ user }) {
+export default function AdminCard({ user }) {
   return (
     <div
       className="admin"

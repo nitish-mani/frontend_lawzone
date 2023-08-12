@@ -10,19 +10,25 @@ export default function Footer() {
   return (
     <div className="footerF">
       <div className="footerF_1st">
-        <a href="https://www.facebook.com/groups/lawsindia.in/" target="_blank">
-          <FacebookIcon />{" "}
+        <a
+          href="https://www.facebook.com/profile.php?id=100072873714809"
+          target="_blank"
+        >
+          <FacebookIcon />
         </a>
 
-        <a href="#" target="_blank">
+        <a href="https://www.instagram.com/lawzonindia/" target="_blank">
           <InstagramIcon />
         </a>
 
-        <a href="#" target="_blank">
+        <a
+          href="https://www.youtube.com/channel/UC6PbI5o7f--w5U_CtoyLMaQ"
+          target="_blank"
+        >
           <YouTubeIcon />
         </a>
 
-        <a href="#" target="_blank">
+        <a href="https://twitter.com/LawzonI" target="_blank">
           <TwitterIcon />
         </a>
       </div>

@@ -39,7 +39,7 @@ export default function Contact({
 
   useEffect(() => {
     createData();
-  }, [userDetails]);
+  }, []);
 
   return (
     <div className="contactC">

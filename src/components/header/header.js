@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./header.css";
-import { Outlet, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 export default function Headers({
   home,
@@ -33,14 +33,14 @@ export default function Headers({
 
   const [isClicked, setIsClicked] = useState(false);
   function handleClick() {
-    if(inData==='nitish7376610360'){
-      navigate('/admin');
+    if (inData === "nitish7376610360") {
+      navigate("/admin");
     }
     setIsClicked(true);
     setTimeout(() => setIsClicked(false), 100);
   }
 
-  const [inData,setInData]=useState('');
+  const [inData, setInData] = useState("");
 
   const navigate = useNavigate();
 
@@ -54,67 +54,71 @@ export default function Headers({
         />
       </div>
 
-     <div className="inputField">
-     <input type="text" className="input" onChange={(e)=>{
-        setInData(e.target.value);
-      }}/>
-      <button
-        className="button"
-        onClick={handleClick}
-        style={{
-          backgroundColor: isClicked ? "#0D1282" : true,
-          transform: isClicked ? "scale(0.8)" : true,
-          // transition: isClicked ? "2s" : '0s',
-        }}
-      >
-        Search
-      </button>
-     </div>
-     <div className="componentsField">
-     <div
-        className="home"
-        onMouseEnter={handleMouseEnterHome}
-        onMouseLeave={handleMouseLeaveHome}
-        style={{
-          color: isHovered ? "#068fff" : "rgb(49, 66, 89)",
-          cursor: "pointer",
-        }}
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        Home
+      <div className="inputField">
+        <input
+          type="text"
+          className="input"
+          onChange={(e) => {
+            setInData(e.target.value);
+          }}
+        />
+        <button
+          className="button"
+          onClick={handleClick}
+          style={{
+            backgroundColor: isClicked ? "#0D1282" : true,
+            transform: isClicked ? "scale(0.8)" : true,
+            // transition: isClicked ? "2s" : '0s',
+          }}
+        >
+          Search
+        </button>
       </div>
-      <div
-        className="ourservices"
-        onMouseEnter={handleMouseEnterServices}
-        onMouseLeave={handleMouseLeaveServices}
-        style={{
-          color: isHovered1 ? "#068fff" : "rgb(49, 66, 89)",
+      <div className="componentsField">
+        <div
+          className="home"
+          onMouseEnter={handleMouseEnterHome}
+          onMouseLeave={handleMouseLeaveHome}
+          style={{
+            color: isHovered ? "#068fff" : "rgb(49, 66, 89)",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Home
+        </div>
+        <div
+          className="ourservices"
+          onMouseEnter={handleMouseEnterServices}
+          onMouseLeave={handleMouseLeaveServices}
+          style={{
+            color: isHovered1 ? "#068fff" : "rgb(49, 66, 89)",
 
-          cursor: "pointer",
-        }}
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        Our Services
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Our Services
+        </div>
+        <div
+          className="contactus"
+          onMouseEnter={handleMouseEnterContact}
+          onMouseLeave={handleMouseLeaveContact}
+          style={{
+            color: isHovered2 ? "#068fff" : "rgb(49, 66, 89)",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            navigate("/contact");
+          }}
+        >
+          Contact Us
+        </div>
       </div>
-      <div
-        className="contactus"
-        onMouseEnter={handleMouseEnterContact}
-        onMouseLeave={handleMouseLeaveContact}
-        style={{
-          color: isHovered2 ? "#068fff" : "rgb(49, 66, 89)",
-          cursor: "pointer",
-        }}
-        onClick={() => {
-          navigate("/contact");
-        }}
-      >
-        Contact Us
-      </div>
-     </div>
     </div>
   );
 }

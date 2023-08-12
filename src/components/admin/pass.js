@@ -62,7 +62,7 @@ export default function Pass({ setPassword }) {
           backgroundColor: "black",
           borderRadius: "5px",
           textAlign: "center",
-          width: "90%",
+
           marginLeft: "auto",
           marginRight: "auto",
 

@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Pass({ setPassword }) {
   const [adminP, setAdminP] = useState("");
   function handleSubmit() {
-    if (adminP === "12345") {
+    if (adminP === "lawzone12345") {
       setPassword(adminP);
     } else {
       alert("Please enter right password");

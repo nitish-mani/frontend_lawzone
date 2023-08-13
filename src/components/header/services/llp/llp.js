@@ -16,6 +16,10 @@ export default function LLP({ name, setName, mob, setMob, email, setEmail }) {
   }
   const [isClicked, setIsClicked] = useState(false);
   const [userDetails, setUserDetails] = useState("");
+  const [dataN, setDataN] = useState("");
+  const [dataM, setDataM] = useState("");
+  const [dataE, setDataE] = useState("");
+
   const createData = () =>
     axios({
       method: "POST",
@@ -24,6 +28,7 @@ export default function LLP({ name, setName, mob, setMob, email, setEmail }) {
     });
 
   function handleSubmit() {
+    if (name && mob && email) {
     setUserDetails({
       name: name,
       phoneNumber: mob,
@@ -36,9 +41,16 @@ export default function LLP({ name, setName, mob, setMob, email, setEmail }) {
       time: `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
     });
     setIsClicked(true);
+    setDataE("");
+    setDataM("");
+    setDataN("");
+
     setTimeout(() => {
       setIsClicked(false);
     }, 100);
+  } else {
+    alert("Please fill the details");
+  }
   }
 
   useEffect(() => {
@@ -192,20 +204,27 @@ export default function LLP({ name, setName, mob, setMob, email, setEmail }) {
           <div className="trademarksTFirstChild_2nd_2nd">
             <input
               placeholder="Name"
+              autoFocus
+              value={dataN}
               onChange={(e) => {
                 setName(e.target.value);
+                setDataN(e.target.value)
               }}
             />
             <input
               placeholder="Mobile No."
+              value={dataM}
               onChange={(e) => {
                 setMob(e.target.value);
+                setDataM(e.target.value)
               }}
             />
             <input
               placeholder="Email"
+              value={dataE}
               onChange={(e) => {
                 setEmail(e.target.value);
+                setDataE(e.target.value)
               }}
             />
             <div

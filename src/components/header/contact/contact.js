@@ -12,6 +12,9 @@ export default function Contact({
 }) {
   const [isClicked, setIsClicked] = useState(false);
   const [userDetails, setUserDetails] = useState("");
+  const [dataN, setDataN] = useState("");
+  const [dataM, setDataM] = useState("");
+  const [dataE, setDataE] = useState("");
 
   const createData = () =>
     axios({
@@ -21,20 +24,26 @@ export default function Contact({
     });
 
   function handleFormInput() {
-    setUserDetails({
-      name: name,
-      phoneNumber: mob,
-      email: email,
-      date: `${new Date().getDate()} / ${
-        new Date().getMonth() + 1
-      } / ${new Date().getFullYear()}`,
-      time: `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
-    });
-
-    setIsClicked(true);
-    setTimeout(() => {
-      setIsClicked(false);
-    }, 150);
+    if (name && mob && email) {
+      setUserDetails({
+        name: name,
+        phoneNumber: mob,
+        email: email,
+        date: `${new Date().getDate()} / ${
+          new Date().getMonth() + 1
+        } / ${new Date().getFullYear()}`,
+        time: `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
+      });
+      setDataN("");
+      setDataM("");
+      setDataE("");
+      setIsClicked(true);
+      setTimeout(() => {
+        setIsClicked(false);
+      }, 150);
+    } else {
+      alert("Please fill the details");
+    }
   }
 
   useEffect(() => {
@@ -51,8 +60,11 @@ export default function Contact({
             <span>Name</span>
             <input
               type="text"
+              value={dataN}
+              autoFocus
               onChange={(e) => {
                 setName(e.target.value);
+                setDataN(e.target.value);
               }}
             />
           </div>
@@ -60,8 +72,10 @@ export default function Contact({
             <span>Mobile No.</span>
             <input
               type="text"
+              value={dataM}
               onChange={(e) => {
                 setMob(e.target.value);
+                setDataM(e.target.value);
               }}
             />
           </div>
@@ -69,8 +83,10 @@ export default function Contact({
             <span>Email</span>
             <input
               type="email"
+              value={dataE}
               onChange={(e) => {
                 setEmail(e.target.value);
+                setDataE(e.target.value);
               }}
             />
           </div>

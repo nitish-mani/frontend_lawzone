@@ -12,6 +12,10 @@ export default function Compliance({
 }) {
   const [isClicked, setIsClicked] = useState(false);
   const [userDetails, setUserDetails] = useState("");
+  const [dataN, setDataN] = useState("");
+  const [dataM, setDataM] = useState("");
+  const [dataE, setDataE] = useState("");
+
   const createData = () =>
     axios({
       method: "POST",
@@ -20,21 +24,28 @@ export default function Compliance({
     });
 
   function handleSubmit() {
-    setUserDetails({
-      name: name,
-      phoneNumber: mob,
-      email: email,
-      service: "Compliance",
+    if (name && mob && email) {
+      setUserDetails({
+        name: name,
+        phoneNumber: mob,
+        email: email,
+        service: "Compliance",
 
-      date: `${new Date().getDate()} / ${
-        new Date().getMonth() + 1
-      } / ${new Date().getFullYear()}`,
-      time: `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
-    });
-    setIsClicked(true);
-    setTimeout(() => {
-      setIsClicked(false);
-    }, 100);
+        date: `${new Date().getDate()} / ${
+          new Date().getMonth() + 1
+        } / ${new Date().getFullYear()}`,
+        time: `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
+      });
+      setIsClicked(true);
+      setDataE("");
+      setDataM("");
+      setDataN("");
+      setTimeout(() => {
+        setIsClicked(false);
+      }, 100);
+    } else {
+      alert("Please fill the details");
+    }
   }
 
   useEffect(() => {
@@ -113,20 +124,27 @@ export default function Compliance({
           <div className="trademarksTFirstChild_2nd_2nd">
             <input
               placeholder="Name"
+              autoFocus
+              value={dataN}
               onChange={(e) => {
                 setName(e.target.value);
+                setDataN(e.target.value);
               }}
             />
             <input
               placeholder="Mobile No."
+              value={dataM}
               onChange={(e) => {
                 setMob(e.target.value);
+                setDataM(e.target.value);
               }}
             />
             <input
               placeholder="Email"
+              value={dataE}
               onChange={(e) => {
                 setEmail(e.target.value);
+                setDataE(e.target.value);
               }}
             />
             <div

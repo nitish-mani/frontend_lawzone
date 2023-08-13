@@ -49,19 +49,22 @@
   transform: scale(1.2);
 }
 .rootR > .whatsapp {
-  position: relative;
+  position: sticky;
   height: 75px;
+  bottom: 0;
+  left: 95%;
+  width: fit-content;
   z-index: 1;
   /* border: 2px solid black; */
 }
 .rootR > .whatsapp > .whatsapp_1st {
-  position: absolute;
-  right: 25px;
+  /* position: absolute;
+  right: 25px; */
   border-radius: 20%;
-  transition: .3s;
+  transition: 0.2s;
 }
-.rootR > .whatsapp > .whatsapp_1st:hover{
-  transform: scale(1.2);
+.rootR > .whatsapp > .whatsapp_1st:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 1335px) {

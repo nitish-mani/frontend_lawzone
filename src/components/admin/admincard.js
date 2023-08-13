@@ -3,11 +3,6 @@ export default function AdminCard({ user }) {
     <div
       className="admin"
       style={{
-        color: "rgb(49, 66, 89)",
-        lineHeight: "32px",
-        margin: "20px 0px",
-        fontSize: "18px",
-        fontWeight: "500",
         backgroundColor: user.read ? "white" : "aliceblue",
       }}
     >

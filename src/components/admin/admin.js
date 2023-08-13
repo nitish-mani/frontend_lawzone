@@ -45,20 +45,10 @@ export default function Admin() {
   }, [getData]);
 
   return (
-    <div>
+    <div className="div_parent_admin">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div style={{ width: "50%" }}>
-          <h1
-            style={{
-              color: "rgb(49, 66, 89)",
-              lineHeight: "32px",
-              margin: "20px 0px",
-              fontSize: "25px",
-              fontWeight: "900",
-            }}
-          >
-            Hello Mr. Admin
-          </h1>
+          <h1>Hello Mr. Admin</h1>
         </div>
         <div
           style={{
@@ -68,42 +58,9 @@ export default function Admin() {
             width: "50%",
           }}
         >
-          <h3
-            style={{
-              color: "rgb(49, 66, 89)",
-              lineHeight: "32px",
-              margin: "20px 0px",
-              fontSize: "18px",
-              fontWeight: "700",
-              cursor: "pointer",
-            }}
-          >
-            All ({getData.length})
-          </h3>
-          <h3
-            style={{
-              color: "rgb(49, 66, 89)",
-              lineHeight: "32px",
-              margin: "20px 0px",
-              fontSize: "18px",
-              fontWeight: "700",
-              cursor: "pointer",
-            }}
-          >
-            Read ({count})
-          </h3>
-          <h3
-            style={{
-              color: "rgb(49, 66, 89)",
-              lineHeight: "32px",
-              margin: "20px 0px",
-              fontSize: "18px",
-              fontWeight: "700",
-              cursor: "pointer",
-            }}
-          >
-            Unread ({getData.length - count})
-          </h3>
+          <h3>All ({getData.length})</h3>
+          <h3>Read ({count})</h3>
+          <h3>Unread ({getData.length - count})</h3>
         </div>
       </div>
       <div className="parent-admin">

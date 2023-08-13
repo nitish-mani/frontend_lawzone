@@ -12,19 +12,7 @@ export default function Pass({ setPassword }) {
   console.log(adminP);
 
   return (
-    <div
-      style={{
-        width: "400px",
-        height: "300px",
-        marginTop: "5vh",
-        marginBottom: "10vh",
-        textAlign: "center",
-        marginLeft: "auto",
-        marginRight: "auto",
-        boxShadow: "1px 1px 10px black",
-        paddingTop: "5vh",
-      }}
-    >
+    <div className="passP">
       <h2
         style={{
           color: "rgb(49, 66, 89)",
@@ -54,24 +42,7 @@ export default function Pass({ setPassword }) {
           textAlign: "center",
         }}
       />
-      <div
-        onClick={handleSubmit}
-        style={{
-          width: "100px",
-          height: "30px",
-          color: "white",
-          backgroundColor: "black",
-          borderRadius: "5px",
-          textAlign: "center",
-
-          marginLeft: "auto",
-          marginRight: "auto",
-
-          fontSize: "18px",
-          fontWeight: "500",
-          cursor: "pointer",
-        }}
-      >
+      <div onClick={handleSubmit} className="passSubmit">
         Submit
       </div>
     </div>

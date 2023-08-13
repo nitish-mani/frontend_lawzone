@@ -1,3 +1,24 @@
+.div_parent_admin {
+  width: 90%;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+}
+.div_parent_admin > div > div > h1 {
+  color: rgb(49, 66, 89);
+  line-height: 32px;
+  margin: 20px 0px;
+  font-size: 25px;
+  font-weight: 900;
+}
+.div_parent_admin > div > div > h3 {
+  color: rgb(49, 66, 89);
+  line-height: 32px;
+  margin: 20px 0px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .parent-admin {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -15,6 +36,11 @@
   box-shadow: 1px 1px 10px rgb(0 0 0/20%);
   padding: 15px;
   cursor: pointer;
+  color: rgb(49, 66, 89);
+  line-height: 32px;
+  /* margin: 20px 0px; */
+  font-size: 18px;
+  font-weight: 700;
 }
 .admin > .admin_name {
   grid-column: 1/2;
@@ -58,4 +84,124 @@
   gap: 57px;
   /* justify-content: space-around; */
   /* align-items: center; */
+}
+.passP {
+  width: 400px;
+  height: 300px;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 1px 1px 10px black;
+  padding-top: 5vh;
+}
+.passSubmit {
+  width: 100px;
+  height: 30px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media screen and (max-width: 506px) {
+  .passP {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .div_parent_admin > .parent-admin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
+@media screen and (max-width: 1331px) {
+  .div_parent_admin > .parent-admin {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+  }
+}
+@media screen and (max-width: 850px) {
+  .div_parent_admin > div > div > h1 {
+    color: rgb(49, 66, 89);
+    line-height: 20px;
+    margin: 15px 0px;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .div_parent_admin > div > div > h3 {
+    color: rgb(49, 66, 89);
+    line-height: 20px;
+    margin: 15px 0px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 600px) {
+  .admin {
+    width: 12rem;
+    color: rgb(49, 66, 89);
+    line-height: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .admin > div {
+    gap: 0;
+    width: 12rem;
+    border: 2px solid black;
+  }
+  .admin > .admin_email {
+    grid-column: 1/2;
+    display: flex;
+    gap: 0px;
+   
+  }
+  .admin > div > div {
+    width: 12rem;
+  }
+  .div_parent_admin > div > div > h1 {
+    font-size: 15px;
+  }
+  .div_parent_admin > div > div > h3 {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width:300px) {
+  .admin {
+    width: 10rem;
+    color: rgb(49, 66, 89);
+    line-height: 15px;
+
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .admin > div {
+    gap: 0;
+    width: 10rem;
+    border: 2px solid black;
+  }
+  .admin > div > div {
+    width: 10rem;
+  }
+  .div_parent_admin > div > div > h1 {
+    font-size: 12px;
+  }
+  .div_parent_admin > div > div > h3 {
+    font-size: 10px;
+  }
 }

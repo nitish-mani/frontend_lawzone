@@ -114,7 +114,7 @@
   > .trademarksTFirstChild_1st_2nd_2nd
   > div {
   width: 85%;
-  height: 15vh;
+  /* height: 15vh; */
   padding: 1vw;
   background-color: aliceblue;
   cursor: pointer;

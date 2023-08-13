@@ -230,3 +230,27 @@
     /* border: 2px solid blue; */
   }
 }
+@media screen and (max-width:400px) {
+  .iecI
+  > .trademarksTFirstChild
+  > .trademarksTFirstChild_1st
+  > .trademarksTFirstChild_1st_2nd
+  > .trademarksTFirstChild_1st_2nd_2nd
+  > .div1 {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 5px;
+  /* font-weight: 700; */
+}
+.iecI
+> .trademarksTFirstChild
+> .trademarksTFirstChild_1st
+> .trademarksTFirstChild_1st_2nd
+> .trademarksTFirstChild_1st_2nd_2nd
+> .div2 {
+margin-left: 0;
+margin-right: 0;
+border-radius: 5px;
+/* font-weight: 700; */
+}
+}

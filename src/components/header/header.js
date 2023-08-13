@@ -38,9 +38,36 @@ export default function Headers({
     }
     setIsClicked(true);
     setTimeout(() => setIsClicked(false), 100);
+    setData("");
   }
 
+  // const arr = [
+  //   "Home",
+  //   "Our Services",
+  //   "Contact Us",
+  //   "Trademarks",
+  //   "Copyright",
+  //   "Barcode",
+  //   "IEC (Import-Export Code)",
+  //   "ISO",
+  //   "Proprietorship",
+  //   "LLP Registration",
+  //   "Company Pvt. Ltd./Limited",
+  //   " CSR",
+  //   "MSME",
+  //   "Partnership Firm",
+  //   "FSSAI (Registration & Licence)",
+  //   " FCRA",
+  //   "12A & 80G",
+  //   "NITI Aayog",
+  //   "NGO (Society, Trust & section 8 Co.)",
+  //   " ISBN",
+  //   "PF & ESIC",
+  //   "Compliance Work",
+  // ];
+
   const [inData, setInData] = useState("");
+  const [data, setData] = useState("");
 
   const navigate = useNavigate();
 
@@ -58,8 +85,10 @@ export default function Headers({
         <input
           type="text"
           className="input"
+          value={data}
           onChange={(e) => {
             setInData(e.target.value);
+            setData(e.target.value);
           }}
         />
         <button

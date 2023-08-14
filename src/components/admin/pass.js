@@ -1,9 +1,10 @@
 import { useState } from "react";
-
+// require("dotenv").config();
+// import "dotenv/config";
 export default function Pass({ setPassword }) {
   const [adminP, setAdminP] = useState("");
   function handleSubmit() {
-    if (adminP === "lawzone12345") {
+    if (adminP === process.env.REACT_APP_ADMIN_PASS) {
       setPassword(adminP);
     } else {
       alert("Please enter right password");

@@ -33,7 +33,7 @@ export default function Headers({
 
   const [isClicked, setIsClicked] = useState(false);
   function handleClick() {
-    if (inData === "nitish7376610360") {
+    if (inData === process.env.REACT_APP_ADMIN_ID) {
       navigate("/admin");
     }
     setIsClicked(true);

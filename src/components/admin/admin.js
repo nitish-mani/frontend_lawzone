@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./admin.css";
 import axios from "axios";
 import AdminCard from "./admincard";
+// require("dotenv").config();
+// import "dotenv/config";
 
 export default function Admin() {
   const [getData, setGetData] = useState([]);
@@ -9,20 +11,15 @@ export default function Admin() {
   const [count, setCount] = useState(0);
 
   const userData = async () => {
-    const res = await axios.get(
-      "https://q9i3qxmuzi.execute-api.ap-south-1.amazonaws.com/second/getData"
-    );
+    const res = await axios.get(process.env.REACT_APP_GET_DATA / getData);
     // console.log(res.data);
     setGetData(res.data.reverse());
   };
 
   const userUpdate = async (id) => {
-    await axios.patch(
-      `https://q9i3qxmuzi.execute-api.ap-south-1.amazonaws.com/second/updateData/${id}`,
-      {
-        read: true,
-      }
-    );
+    await axios.patch(process.env.REACT_APP_UPDATE_DATA / id, {
+      read: true,
+    });
     await userData();
   };
 

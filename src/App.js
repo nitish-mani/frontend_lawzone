@@ -4,7 +4,8 @@ import "./App.css";
 // import Navbar from "./components/navbar/navbar";
 import Main from "./components/main/main";
 import { useState } from "react";
-
+// require("dotenv").config();
+// import 'dotenv/config';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Contact from "./components/header/contact/contact";
 import Trademarks from "./components/header/services/trademarks/trademarks";
@@ -31,6 +32,7 @@ import Compliance from "./components/header/services/compliance/compliance";
 // import axios from "axios";
 import Admin from "./components/admin/admin";
 import Pass from "./components/admin/pass";
+console.log(process.env.REACT_APP_BASE_URL);
 
 function App() {
   const [isHovered, setIsHovered] = useState(false);
@@ -52,6 +54,8 @@ function App() {
   const [mob, setMob] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  console.log(process.env.REACT_APP_ADMIN_PASS);
 
   const router = createBrowserRouter([
     {
@@ -334,7 +338,7 @@ function App() {
         {
           path: "/admin",
           element:
-            password === "lawzone12345" ? (
+            password === process.env.REACT_APP_ADMIN_PASS ? (
               <Admin />
             ) : (
               <Pass setPassword={setPassword} />

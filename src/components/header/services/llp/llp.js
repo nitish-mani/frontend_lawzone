@@ -23,34 +23,34 @@ export default function LLP({ name, setName, mob, setMob, email, setEmail }) {
   const createData = () =>
     axios({
       method: "POST",
-      url: "https://q9i3qxmuzi.execute-api.ap-south-1.amazonaws.com/second/postData",
+      url: `${process.env.REACT_APP_BASE_URL}/postData`,
       data: userDetails,
     });
 
   function handleSubmit() {
     if (name && mob && email) {
-    setUserDetails({
-      name: name,
-      phoneNumber: mob,
-      email: email,
-      service: "LLP Registration",
+      setUserDetails({
+        name: name,
+        phoneNumber: mob,
+        email: email,
+        service: "LLP Registration",
 
-      date: `${new Date().getDate()} / ${
-        new Date().getMonth() + 1
-      } / ${new Date().getFullYear()}`,
-      time: `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
-    });
-    setIsClicked(true);
-    setDataE("");
-    setDataM("");
-    setDataN("");
+        date: `${new Date().getDate()} / ${
+          new Date().getMonth() + 1
+        } / ${new Date().getFullYear()}`,
+        time: `${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`,
+      });
+      setIsClicked(true);
+      setDataE("");
+      setDataM("");
+      setDataN("");
 
-    setTimeout(() => {
-      setIsClicked(false);
-    }, 100);
-  } else {
-    alert("Please fill the details");
-  }
+      setTimeout(() => {
+        setIsClicked(false);
+      }, 100);
+    } else {
+      alert("Please fill the details");
+    }
   }
 
   useEffect(() => {
@@ -208,7 +208,7 @@ export default function LLP({ name, setName, mob, setMob, email, setEmail }) {
               value={dataN}
               onChange={(e) => {
                 setName(e.target.value);
-                setDataN(e.target.value)
+                setDataN(e.target.value);
               }}
             />
             <input
@@ -216,7 +216,7 @@ export default function LLP({ name, setName, mob, setMob, email, setEmail }) {
               value={dataM}
               onChange={(e) => {
                 setMob(e.target.value);
-                setDataM(e.target.value)
+                setDataM(e.target.value);
               }}
             />
             <input
@@ -224,7 +224,7 @@ export default function LLP({ name, setName, mob, setMob, email, setEmail }) {
               value={dataE}
               onChange={(e) => {
                 setEmail(e.target.value);
-                setDataE(e.target.value)
+                setDataE(e.target.value);
               }}
             />
             <div

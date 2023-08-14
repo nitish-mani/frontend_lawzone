@@ -18,7 +18,7 @@ export default function PF_ESIC({
   const createData = () =>
     axios({
       method: "POST",
-      url: "https://q9i3qxmuzi.execute-api.ap-south-1.amazonaws.com/second/postData",
+      url: `${process.env.REACT_APP_BASE_URL}/postData`,
       data: userDetails,
     });
 

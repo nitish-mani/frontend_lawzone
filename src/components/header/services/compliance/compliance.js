@@ -15,11 +15,11 @@ export default function Compliance({
   const [dataN, setDataN] = useState("");
   const [dataM, setDataM] = useState("");
   const [dataE, setDataE] = useState("");
-
+  console.log(process.env.REACT_APP_BASE_URL);
   const createData = () =>
     axios({
       method: "POST",
-      url: "https://q9i3qxmuzi.execute-api.ap-south-1.amazonaws.com/second/postData",
+      url: `${process.env.REACT_APP_BASE_URL}/postData`,
       data: userDetails,
     });
 

@@ -22,7 +22,7 @@ export default function IEC({ name, setName, mob, setMob, email, setEmail }) {
   const createData = () =>
     axios({
       method: "POST",
-      url: "https://q9i3qxmuzi.execute-api.ap-south-1.amazonaws.com/second/postData",
+      url: `${process.env.REACT_APP_BASE_URL}/postData`,
       data: userDetails,
     });
 

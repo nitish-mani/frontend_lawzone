@@ -2,7 +2,7 @@ import "./copyright.css";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+console.log(process.env.REACT_APP_BASE_URL);
 export default function Copyright({
   name,
   setName,
@@ -20,7 +20,7 @@ export default function Copyright({
   const createData = () =>
     axios({
       method: "POST",
-      url: "https://q9i3qxmuzi.execute-api.ap-south-1.amazonaws.com/second/postData",
+      url: `${process.env.REACT_APP_BASE_URL}/postData`,
       data: userDetails,
     });
 

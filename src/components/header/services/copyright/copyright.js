@@ -2,7 +2,7 @@ import "./copyright.css";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-console.log(process.env.REACT_APP_BASE_URL);
+// console.log(process.env.REACT_APP_BASE_URL);
 export default function Copyright({
   name,
   setName,

@@ -32,7 +32,7 @@ import Compliance from "./components/header/services/compliance/compliance";
 // import axios from "axios";
 import Admin from "./components/admin/admin";
 import Pass from "./components/admin/pass";
-console.log(process.env.REACT_APP_BASE_URL);
+// console.log(process.env.REACT_APP_BASE_URL);
 
 function App() {
   const [isHovered, setIsHovered] = useState(false);
@@ -55,7 +55,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  console.log(process.env.REACT_APP_ADMIN_PASS);
+  // console.log(process.env.REACT_APP_ADMIN_PASS);
 
   const router = createBrowserRouter([
     {

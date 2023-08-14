@@ -11,13 +11,13 @@ export default function Admin() {
   const [count, setCount] = useState(0);
 
   const userData = async () => {
-    const res = await axios.get(`${process.env.REACT_APP_GET_DATA}/getData`);
+    const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/getData`);
     // console.log(res.data);
     setGetData(res.data.reverse());
   };
 
   const userUpdate = async (id) => {
-    await axios.patch(`${process.env.REACT_APP_UPDATE_DATA}/id`, {
+    await axios.patch(`${process.env.REACT_APP_BASE_URL}/id`, {
       read: true,
     });
     await userData();

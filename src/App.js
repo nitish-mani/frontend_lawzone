@@ -6,7 +6,7 @@ import Main from "./components/main/main";
 import { useState } from "react";
 // require("dotenv").config();
 // import 'dotenv/config';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Contact from "./components/header/contact/contact";
 import Trademarks from "./components/header/services/trademarks/trademarks";
 // import Footer from "./components/footer/footer";
@@ -57,7 +57,7 @@ function App() {
 
   // console.log(process.env.REACT_APP_ADMIN_PASS);
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: (

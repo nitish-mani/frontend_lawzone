@@ -11,13 +11,13 @@ export default function Admin() {
   const [count, setCount] = useState(0);
 
   const userData = async () => {
-    const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/getData`);
+    const res = await axios.get(`${process.env.REACT_APP_BASE_URL}/getData`,{headers:{'adminpass':sessionStorage.getItem('adminpass')}});
     // console.log(res.data);
     setGetData(res.data.reverse());
   };
 
   const userUpdate = async (id) => {
-    await axios.patch(`${process.env.REACT_APP_BASE_URL}/id`, {
+    await axios.patch(`${process.env.REACT_APP_BASE_URL}/id`, {headers:{'adminpass':sessionStorage.getItem('adminpass')}},{
       read: true,
     });
     await userData();

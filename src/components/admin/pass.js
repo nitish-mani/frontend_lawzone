@@ -7,17 +7,11 @@ export default function Pass({ setPassword }) {
   const navigate = useNavigate();
   const [adminP, setAdminP] = useState("");
   function handleSubmit() {
-    axios
-      .get(`${process.env.REACT_APP_BASE_URL}/getData`, {
-        headers: { adminpass: adminP },
-      })
-      .then((res) => {
-        if (res.status == 200) {
-          setPassword(adminP);
-          sessionStorage.setItem("adminpass", adminP);
-        }
-
-      }).catch(err=>alert('wrong password'));
+    if (adminP === process.env.REACT_APP_ADMIN_PASS) {
+      setPassword(adminP);
+    } else {
+      alert("Please enter right password");
+    }
   }
   console.log(adminP);
 

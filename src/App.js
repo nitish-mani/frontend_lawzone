@@ -338,7 +338,7 @@ function App() {
         {
           path: "/admin",
           element:
-            password === sessionStorage.getItem("adminpass") ? (
+            password === process.env.REACT_APP_ADMIN_PASS ? (
               <Admin />
             ) : (
               <Pass setPassword={setPassword} />

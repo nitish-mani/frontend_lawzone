@@ -17,7 +17,8 @@ export default function Admin() {
   };
 
   const userUpdate = async (id) => {
-    await axios.patch(`${process.env.REACT_APP_BASE_URL}/updateData/id`, {
+    console.log(id);
+    await axios.patch(`${process.env.REACT_APP_BASE_URL}/updateData/${id}`, {
       read: true,
     });
     await userData();

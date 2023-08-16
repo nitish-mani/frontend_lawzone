@@ -60,7 +60,7 @@ export default function Main({ isHovered1, services }) {
       <section className="section2">
         <div className="sec2_div1">
           <img
-            src="https://lawzonindia.com/wp-content/themes/econsulting-agency/images/computer-working-person-group-people-meeting-559565-pxhere.com.jpg"
+            src="https://media.istockphoto.com/id/1392016982/photo/mixed-group-of-business-people-sitting-around-a-table-and-talking.jpg?s=612x612&w=0&k=20&c=d7mWQhdzKrowHYTWXXcCrNn02uyfLYQYB78M75G8lKg="
             alt="photo"
           />
         </div>

@@ -59,7 +59,7 @@
 }
 .contactC > .contactForm > form > .contactFormName {
   border-bottom: 1px solid black;
-  /* height: 5vh; */
+  height: 5vh;
   padding: 10px 0;
   width: 90%;
   margin-top: 1vw;
@@ -69,7 +69,7 @@
 
 .contactC > .contactForm > form > .contactFormName > input {
   width: 70%;
-  height: 88%;
+  height: 100%;
   margin-left: 3.5vw;
   border: none;
   padding-left: 1vw;
@@ -79,7 +79,7 @@
 }
 .contactC > .contactForm > form > .contactFormMob {
   border-bottom: 1px solid black;
-  /* height: 5vh; */
+  height: 5vh;
   padding: 10px 0;
   width: 90%;
   margin-top: 1vw;
@@ -88,7 +88,7 @@
 }
 .contactC > .contactForm > form > .contactFormMob > input {
   width: 70%;
-  height: 88%;
+  height: 100%;
   margin-left: 1vw;
   border: none;
   padding-left: 1vw;
@@ -98,7 +98,7 @@
 }
 .contactC > .contactForm > form > .contactFormEmail {
   border-bottom: 1px solid black;
-  /* height: 5vh; */
+  height: 5vh;
   padding: 10px 0;
   width: 90%;
   margin-top: 1vw;
@@ -107,7 +107,7 @@
 }
 .contactC > .contactForm > form > .contactFormEmail > input {
   width: 70%;
-  height: 88%;
+  height: 100%;
   margin-left: 3.8vw;
   border: none;
   padding-left: 1vw;
@@ -135,10 +135,49 @@
   .contactC > .contactForm > form > span {
     display: block;
   }
+  .contactC > .contactForm > form > .contactFormMob {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    align-items: center;
+    height: 10vh;
+  }
+  .contactC > .contactForm > form > .contactFormMob > input {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .contactC > .contactForm > form > .contactFormName {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    align-items: center;
+    height: 10vh;
+  }
+  .contactC > .contactForm > form > .contactFormName > input {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .contactC > .contactForm > form > .contactFormEmail {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    align-items: center;
+    height: 10vh;
+  }
+  .contactC > .contactForm > form > .contactFormEmail > input {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
 }
 @media screen and (max-width: 700px) {
   .contactC > .contactForm > form {
     font-size: 12px;
+  }
+  .contactC > .contactForm > form > div > input {
+    font-size: 10px;
   }
   .contactC > .contactForm > form > span {
     display: block;

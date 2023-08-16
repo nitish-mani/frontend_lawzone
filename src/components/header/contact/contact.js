@@ -103,6 +103,17 @@ export default function Contact({
           </div>
         </form>
       </div>
+      <div className="contact-div">
+        <div className="div1">
+          <h2>Lawzon India</h2>
+          <p>Mob :- 9350833018, 9999088138</p>
+          <p>Email :- lawzonindia@gmail.com</p>
+          <p>
+            207-208,2nd Floor, Basant Complex, 38, Veer Savarkar Block,
+            Shakarpur,Delhi-110092
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

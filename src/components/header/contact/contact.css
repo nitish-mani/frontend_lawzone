@@ -131,6 +131,33 @@
   cursor: pointer;
   transition: 1.5s;
 }
+
+.contactC > .contact-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 10vh; */
+  width: 50%;
+  /* flex-wrap: wrap; */
+  margin-top: 10vh;
+  gap: 0.5rem;
+  border: 2px solid black;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(49, 66, 89);
+  box-shadow: 1px 1px 4px 4px black;
+}
+.contactC > .contact-div > .div1 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+.contactC > .contact-div > .div1 > h2 {
+  font-size: 30px;
+}
+
 @media screen and (max-width: 1000px) {
   .contactC > .contactForm > form > span {
     display: block;
@@ -181,5 +208,40 @@
   }
   .contactC > .contactForm > form > span {
     display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contactC > .contact-div > .div1 {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    /* border: 2px solid black; */
+    background-color: white;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contactC > .contact-div > .div1 > h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .contactC > .contact-div > .div1 > h2 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .contactC > .contact-div > .div1 {
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    /* border: 2px solid black; */
+    background-color: white;
+    padding: 5px;
+  }
+  .contactC > .contact-div > .div1 > p {
+    font-size: 8px;
+    font-weight: 500;
   }
 }

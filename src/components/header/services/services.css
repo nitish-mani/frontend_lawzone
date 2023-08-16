@@ -32,7 +32,12 @@
 
   font-size: 15px;
 }
-
+@media screen and (max-width: 1450px) {
+  .servicesS {
+    /* border: 2px solid black; */
+    top: 105px;
+  }
+}
 @media screen and (max-width: 1350px) {
   .servicesS {
     display: grid;

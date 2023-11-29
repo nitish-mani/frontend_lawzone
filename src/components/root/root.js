@@ -23,6 +23,12 @@ export default function Root({
 }) {
   return (
     <div className="rootR">
+    <div style={{ margin: "10px", textAlign: "center" }}>
+        <marquee  direction="left" >
+          Your Free Tier will be ending on 3rd of December 2023. Please pay your
+          bill.
+        </marquee>
+      </div>
       <div className="rootRFirstChild">
         <div className="rootR_1st">
           <div

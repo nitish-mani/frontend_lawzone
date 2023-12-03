@@ -23,13 +23,16 @@ export default function Root({
 }) {
   return (
     <div className="rootR">
-    <div style={{ margin: "10px", textAlign: "center" }}>
-        <marquee  direction="left" >
-          Your Free Tier will be ending on 3rd of December 2023. Please pay your
+   
+      <div style={{ margin: "10px", textAlign: "center" }}>
+        <marquee direction="left">
+          Your Free Tier has been ended on 3rd of December 2023. Please pay your
           bill.
         </marquee>
       </div>
-      <div className="rootRFirstChild">
+      <h1 style={{textAlign:'center', fontSize:'100px' }}> Page Not Available. Please Pay Your Bill.... </h1>
+            
+{/* <div className="rootRFirstChild">
         <div className="rootR_1st">
           <div
             style={{
@@ -120,7 +123,7 @@ export default function Root({
           />
         </ReactWhatsapp>
       </div>
-      <Footer />
+      <Footer />*/}
     </div>
   );
 }
